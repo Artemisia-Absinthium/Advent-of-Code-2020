@@ -1,7 +1,7 @@
-mod day1;
+extern crate advent_of_code_2020;
+extern crate aoc_runner;
+extern crate aoc_runner_derive;
 
-fn main() {
-    println!("Hello, world!");
-    day1::get_2_numbers_that_sum_to_2020();
-    day1::get_3_numbers_that_sum_to_2020();
-}
+use aoc_runner_derive::aoc_main;
+
+aoc_main! { lib = advent_of_code_2020 }

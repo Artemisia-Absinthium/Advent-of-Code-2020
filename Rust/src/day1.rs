@@ -1,4 +1,5 @@
-pub fn get_2_numbers_that_sum_to_2020() {
+#[aoc(day1, part1)]
+pub fn get_2_numbers_that_sum_to_2020(_input: &str) -> u32 {
     let mut inputs = [
         1788, 1627, 1883, 1828, 1924, 1993, 972, 1840, 1866, 1762, 1781, 1782, 1520, 1971, 1660,
         1857, 1867, 1564, 1983, 1391, 2002, 494, 1500, 1967, 1702, 1958, 1886, 1910, 1838, 1985,
@@ -43,10 +44,12 @@ pub fn get_2_numbers_that_sum_to_2020() {
         }
     }
 
-    println!("result {} * {} = {}", a, b, a * b);
+    println!("Day 1.1 result: {} * {} = {}", a, b, a * b);
+    a * b
 }
 
-pub fn get_3_numbers_that_sum_to_2020() {
+#[aoc(day1, part2)]
+pub fn get_3_numbers_that_sum_to_2020(_input: &str) -> u32 {
     let mut inputs = [
         1788, 1627, 1883, 1828, 1924, 1993, 972, 1840, 1866, 1762, 1781, 1782, 1520, 1971, 1660,
         1857, 1867, 1564, 1983, 1391, 2002, 494, 1500, 1967, 1702, 1958, 1886, 1910, 1838, 1985,
@@ -74,10 +77,19 @@ pub fn get_3_numbers_that_sum_to_2020() {
                 let c = inputs[k];
 
                 if a + b + c == 2020 {
-                    println!("result {} * {} * {} = {}", a, b, c, a * b * c);
-                    return;
+                    println!(
+                        "Day 1.2 result: result {} * {} * {} = {}",
+                        a,
+                        b,
+                        c,
+                        a * b * c
+                    );
+                    return a * b * c;
                 }
             }
         }
     }
+
+    println!("Day 1.12 NO RESULTS");
+    0
 }
