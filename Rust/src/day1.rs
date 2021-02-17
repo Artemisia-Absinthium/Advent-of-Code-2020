@@ -44,7 +44,7 @@ pub fn get_2_numbers_that_sum_to_2020(_input: &str) -> u32 {
         }
     }
 
-    println!("Day 1.1 result: {} * {} = {}", a, b, a * b);
+    //println!("Day 1.1 result: {} * {} = {}", a, b, a * b);
     a * b
 }
 
@@ -77,13 +77,13 @@ pub fn get_3_numbers_that_sum_to_2020(_input: &str) -> u32 {
                 let c = inputs[k];
 
                 if a + b + c == 2020 {
-                    println!(
+                    /*println!(
                         "Day 1.2 result: result {} * {} * {} = {}",
                         a,
                         b,
                         c,
                         a * b * c
-                    );
+                    );*/
                     return a * b * c;
                 }
             }
